@@ -2,11 +2,15 @@ import { Link } from "react-router-dom";
 import { PropType } from "prop-types";
 import { FaUser } from "react-icons/fa6";
 
-const BlogCard = ({ blogs }) => {
-  const filteredBlogs = blogs;
+const BlogCard = ({ blogs, currentPage, selectedCategory, pageSize }) => {
+  const filteredBlogs = blogs
+    .filter((blogs) => {
+      return !selectedCategory || blogs.category === selectedCategory;
+    })
+    .slice((currentPage - 1) * pageSize, currentPage * pageSize);
   return (
     <>
-      <div>
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
         {filteredBlogs.map((blog) => {
           return (
             <Link key={blog.key} to={blog.id}>
