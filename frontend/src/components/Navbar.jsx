@@ -31,7 +31,15 @@ const Navbar = () => {
           {navItems.map(({ path, link }) => {
             return (
               <li key={path} className="text-white">
-                <NavLink to={path}> {link}</NavLink>
+                <NavLink
+                  className={({ isActive, pending }) =>
+                    isActive ? "active" : pending ? "pending" : ""
+                  }
+                  to={path}
+                >
+                  {" "}
+                  {link}
+                </NavLink>
               </li>
             );
           })}
