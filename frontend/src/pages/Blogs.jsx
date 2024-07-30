@@ -1,10 +1,7 @@
+import Banner from "../components/Banner";
 
 const Blogs = () => {
-  return (
-    <div>
-      Blogs
-    </div>
-  )
-}
+  return <Banner title={"Blog"} />;
+};
 
-export default Blogs
+export default Blogs;

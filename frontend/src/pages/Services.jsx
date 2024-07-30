@@ -1,5 +1,7 @@
+import Banner from "../components/Banner";
+
 const Services = () => {
-  return <div>Services</div>;
+  return <Banner title={`Services`} />;
 };
 
 export default Services;
