@@ -3,3 +3,7 @@
 .active {
   @apply text-orange-400 underline underline-offset-4;
 }
+
+.activeContainer {
+  @apply bg-orange-400 text-white pt-1 font-bold;
+}
