@@ -36,7 +36,11 @@ const BlogPage = () => {
   return (
     <div>
       {/* category section */}
-      <CategorySelection />
+      <CategorySelection
+        onSelectCategory={handleCategoryChange}
+        selectedCategory={selectedCategory}
+        activeCategory={activeCategory}
+      />
 
       {/* Blog cards section */}
       <BlogCard
