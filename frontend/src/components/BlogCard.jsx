@@ -14,7 +14,7 @@ const BlogCard = ({ blogs, currentPage, selectedCategory, pageSize }) => {
         {filteredBlogs.map((blog) => {
           return (
             <Link key={blog.key} to={blog.id}>
-              <div>
+              <div className="shadow-md p-3">
                 <img src={blog.image} alt="" className="w-full" />
                 <h2 className="mt-4 mb-2 font-bold hover:text-blue-500">
                   {blog.title}
